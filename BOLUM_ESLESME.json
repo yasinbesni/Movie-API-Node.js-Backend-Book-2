@@ -1,0 +1,681 @@
+{
+  "first_book_source": "https://github.com/yasinbesni/Backend-Book-Movie-API",
+  "chapters": [
+    {
+      "number": 1,
+      "chapter": "01_Kullanicili_API/01_Kullanicilar_Geldiginde_API_Neden_Degisir",
+      "heading": "Kullanıcılar Geldiğinde API Neden Değişir?",
+      "complete_examples": [],
+      "code_blocks": 10,
+      "js_blocks": 0,
+      "manuscript": "01_Kullanicili_API/01_Kullanicilar_Geldiginde_API_Neden_Degisir.md"
+    },
+    {
+      "number": 2,
+      "chapter": "01_Kullanicili_API/02_Kimlik_Authentication_Session_Authorization",
+      "heading": "Kimlik, Authentication, Session ve Authorization Aynı Şey Değildir",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 0,
+      "manuscript": "01_Kullanicili_API/02_Kimlik_Authentication_Session_Authorization.md"
+    },
+    {
+      "number": 3,
+      "chapter": "01_Kullanicili_API/03_User_Document_Hangi_Veriler",
+      "heading": "User Document İçinde Hangi Veriler Gerçekten Bulunmalı?",
+      "complete_examples": [],
+      "code_blocks": 9,
+      "js_blocks": 0,
+      "manuscript": "01_Kullanicili_API/03_User_Document_Hangi_Veriler.md"
+    },
+    {
+      "number": 4,
+      "chapter": "01_Kullanicili_API/04_Email_Normalization_Unique",
+      "heading": "E-posta Adresini Neden Düzenliyoruz ve Tekil Tutuyoruz?",
+      "complete_examples": [],
+      "code_blocks": 12,
+      "js_blocks": 3,
+      "manuscript": "01_Kullanicili_API/04_Email_Normalization_Unique.md"
+    },
+    {
+      "number": 5,
+      "chapter": "01_Kullanicili_API/05_User_Schema_Model",
+      "heading": "İlk User Schema ve Modelimizi Nasıl Kurarız?",
+      "complete_examples": [
+        "src/db/models/user.js"
+      ],
+      "code_blocks": 12,
+      "js_blocks": 7,
+      "manuscript": "01_Kullanicili_API/05_User_Schema_Model.md"
+    },
+    {
+      "number": 6,
+      "chapter": "01_Kullanicili_API/06_Register_Joi_Sozlesmesi",
+      "heading": "Register İsteğinde Hangi Bilgilere Güvenebiliriz?",
+      "complete_examples": [
+        "src/validation/auth.js"
+      ],
+      "code_blocks": 11,
+      "js_blocks": 2,
+      "manuscript": "01_Kullanicili_API/06_Register_Joi_Sozlesmesi.md"
+    },
+    {
+      "number": 7,
+      "chapter": "02_Parola_Guvenligi/07_Parola_Neden_Siradan_Alan_Degildir",
+      "heading": "Parola Neden Sıradan Bir Kullanıcı Alanı Değildir?",
+      "complete_examples": [],
+      "code_blocks": 2,
+      "js_blocks": 1,
+      "manuscript": "02_Parola_Guvenligi/07_Parola_Neden_Siradan_Alan_Degildir.md"
+    },
+    {
+      "number": 8,
+      "chapter": "02_Parola_Guvenligi/08_Hashing_Encryption_Salt_Pepper",
+      "heading": "Hashleme (Tek Yönlü Özetleme) ve Şifreleme: Parolayı Nasıl Koruyacağız?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 0,
+      "manuscript": "02_Parola_Guvenligi/08_Hashing_Encryption_Salt_Pepper.md"
+    },
+    {
+      "number": 9,
+      "chapter": "02_Parola_Guvenligi/09_Argon2id_Hash_Verify",
+      "heading": "Argon2id ile Parola Nasıl Saklanır ve Doğrulanır?",
+      "complete_examples": [
+        "src/utils/password.js",
+        "src/scripts/tryPasswords.js"
+      ],
+      "code_blocks": 6,
+      "js_blocks": 2,
+      "manuscript": "02_Parola_Guvenligi/09_Argon2id_Hash_Verify.md"
+    },
+    {
+      "number": 10,
+      "chapter": "02_Parola_Guvenligi/10_Register_Endpoint_Guvenli_Kayit",
+      "heading": "POST /auth/register: İlk Kullanıcı Hesabını Güvenli Biçimde Oluşturalım",
+      "complete_examples": [
+        "src/services/auth.js",
+        "src/controllers/auth.js",
+        "src/routers/auth.js"
+      ],
+      "code_blocks": 16,
+      "js_blocks": 6,
+      "manuscript": "02_Parola_Guvenligi/10_Register_Endpoint_Guvenli_Kayit.md"
+    },
+    {
+      "number": 11,
+      "chapter": "02_Parola_Guvenligi/11_Kullanici_Giris_Yaparken_Backend_Gercekte_Neyi_Dogrular",
+      "heading": "Kullanıcı Giriş Yaparken Backend Gerçekte Neyi Doğrular?",
+      "complete_examples": [],
+      "code_blocks": 10,
+      "js_blocks": 6,
+      "manuscript": "02_Parola_Guvenligi/11_Kullanici_Giris_Yaparken_Backend_Gercekte_Neyi_Dogrular.md"
+    },
+    {
+      "number": 12,
+      "chapter": "02_Parola_Guvenligi/12_Login_Hatalarinda_Neden_Fazla_Bilgi_Vermemeliyiz",
+      "heading": "Login Hatalarında Neden Fazla Bilgi Vermemeliyiz?",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 1,
+      "manuscript": "02_Parola_Guvenligi/12_Login_Hatalarinda_Neden_Fazla_Bilgi_Vermemeliyiz.md"
+    },
+    {
+      "number": 13,
+      "chapter": "02_Parola_Guvenligi/13_POST_Auth_Login_Endpointini_Nasil_Kurariz",
+      "heading": "POST /auth/login Endpoint'ini Nasıl Kurarız?",
+      "complete_examples": [
+        "src/services/auth.js",
+        "src/utils/toPublicUser.js",
+        "src/controllers/auth.js",
+        "src/routers/auth.js"
+      ],
+      "code_blocks": 9,
+      "js_blocks": 5,
+      "manuscript": "02_Parola_Guvenligi/13_POST_Auth_Login_Endpointini_Nasil_Kurariz.md"
+    },
+    {
+      "number": 14,
+      "chapter": "03_Session_Tabanli_Authentication/14_Giris_Yaptik_Ama_Sonraki_Requestte_Kullaniciyi_Nasil_Hatirlayacagiz",
+      "heading": "Giriş Yaptık Ama Sonraki HTTP İsteğinde (Request) Kullanıcıyı Nasıl Hatırlayacağız?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 0,
+      "manuscript": "03_Session_Tabanli_Authentication/14_Giris_Yaptik_Ama_Sonraki_Requestte_Kullaniciyi_Nasil_Hatirlayacagiz.md"
+    },
+    {
+      "number": 15,
+      "chapter": "03_Session_Tabanli_Authentication/15_Cookie_Nedir_ve_Tarayici_Onu_Requeste_Nasil_Ekler",
+      "heading": "Cookie (Çerez) Nedir ve Tarayıcı Onu Request'e Nasıl Ekler?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 2,
+      "manuscript": "03_Session_Tabanli_Authentication/15_Cookie_Nedir_ve_Tarayici_Onu_Requeste_Nasil_Ekler.md"
+    },
+    {
+      "number": 16,
+      "chapter": "03_Session_Tabanli_Authentication/16_Session_Nedir_ve_Session_ID_Neden_Kullanilir",
+      "heading": "Session (Oturum) Nedir ve Session ID (Oturum Kimliği) Neden Kullanılır?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 1,
+      "manuscript": "03_Session_Tabanli_Authentication/16_Session_Nedir_ve_Session_ID_Neden_Kullanilir.md"
+    },
+    {
+      "number": 17,
+      "chapter": "03_Session_Tabanli_Authentication/17_Express_Session_ile_Ilk_Oturumumuzu_Nasil_Olustururuz",
+      "heading": "express-session ile İlk Oturumumuzu Nasıl Oluştururuz?",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 5,
+      "manuscript": "03_Session_Tabanli_Authentication/17_Express_Session_ile_Ilk_Oturumumuzu_Nasil_Olustururuz.md"
+    },
+    {
+      "number": 18,
+      "chapter": "03_Session_Tabanli_Authentication/18_MemoryStore_Neden_Production_Icin_Uygun_Degildir",
+      "heading": "MemoryStore (Bellek Deposu) Neden Production İçin Uygun Değildir?",
+      "complete_examples": [],
+      "code_blocks": 2,
+      "js_blocks": 0,
+      "manuscript": "03_Session_Tabanli_Authentication/18_MemoryStore_Neden_Production_Icin_Uygun_Degildir.md"
+    },
+    {
+      "number": 19,
+      "chapter": "03_Session_Tabanli_Authentication/19_Session_Verisini_MongoDBde_Nasil_Saklariz",
+      "heading": "Session (Oturum) Verisini MongoDB'de Nasıl Saklarız?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 2,
+      "manuscript": "03_Session_Tabanli_Authentication/19_Session_Verisini_MongoDBde_Nasil_Saklariz.md"
+    },
+    {
+      "number": 20,
+      "chapter": "03_Session_Tabanli_Authentication/20_HttpOnly_Secure_ve_SameSite_Cookie_Ayarlari_Neyi_Korur",
+      "heading": "HttpOnly, Secure ve SameSite Cookie (Çerez) Ayarları Neyi Korur?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 5,
+      "manuscript": "03_Session_Tabanli_Authentication/20_HttpOnly_Secure_ve_SameSite_Cookie_Ayarlari_Neyi_Korur.md"
+    },
+    {
+      "number": 21,
+      "chapter": "03_Session_Tabanli_Authentication/21_Logout_Sirasinda_Session_Nasil_Gercekte_Sonlandirilir",
+      "heading": "Çıkış Yapınca Oturum Gerçekten Nasıl Kapanır? (Logout)",
+      "complete_examples": [
+        "src/utils/sessionCookie.js"
+      ],
+      "code_blocks": 6,
+      "js_blocks": 6,
+      "manuscript": "03_Session_Tabanli_Authentication/21_Logout_Sirasinda_Session_Nasil_Gercekte_Sonlandirilir.md"
+    },
+    {
+      "number": 22,
+      "chapter": "03_Session_Tabanli_Authentication/22_Session_Fixation_Nedir_ve_Login_Sonrasi_Session_ID_Neden_Yenilenir",
+      "heading": "Girişten Sonra Oturum Kimliğini Neden Yeniliyoruz? (Session Fixation)",
+      "complete_examples": [],
+      "code_blocks": 3,
+      "js_blocks": 2,
+      "manuscript": "03_Session_Tabanli_Authentication/22_Session_Fixation_Nedir_ve_Login_Sonrasi_Session_ID_Neden_Yenilenir.md"
+    },
+    {
+      "number": 23,
+      "chapter": "04_JWT_Access_Refresh/23_Session_Calisiyorsa_Neden_JWT_Diye_Baska_Bir_Yontem_Var",
+      "heading": "Oturum Sistemi Çalışıyorsa Neden JWT Var?",
+      "complete_examples": [],
+      "code_blocks": 2,
+      "js_blocks": 0,
+      "manuscript": "04_JWT_Access_Refresh/23_Session_Calisiyorsa_Neden_JWT_Diye_Baska_Bir_Yontem_Var.md"
+    },
+    {
+      "number": 24,
+      "chapter": "04_JWT_Access_Refresh/24_JWT_Gercekte_Nedir_Header_Payload_Signature_Ne_Anlatir",
+      "heading": "JWT (JSON Web Token) İçinde Ne Var? Başlık, Veri ve İmza",
+      "complete_examples": [],
+      "code_blocks": 3,
+      "js_blocks": 0,
+      "manuscript": "04_JWT_Access_Refresh/24_JWT_Gercekte_Nedir_Header_Payload_Signature_Ne_Anlatir.md"
+    },
+    {
+      "number": 25,
+      "chapter": "04_JWT_Access_Refresh/25_Signed_Token_Neden_Encrypted_Token_Demek_Degildir",
+      "heading": "İmzalı Token (Belirteç) Neden Şifrelenmiş Token Değildir?",
+      "complete_examples": [],
+      "code_blocks": 2,
+      "js_blocks": 1,
+      "manuscript": "04_JWT_Access_Refresh/25_Signed_Token_Neden_Encrypted_Token_Demek_Degildir.md"
+    },
+    {
+      "number": 26,
+      "chapter": "04_JWT_Access_Refresh/26_Access_Token_Nasil_Uretilir_ve_Dogrulanir",
+      "heading": "Access Token (Erişim Belirteci) Nasıl Üretilir ve Doğrulanır?",
+      "complete_examples": [
+        "src/utils/token.js"
+      ],
+      "code_blocks": 6,
+      "js_blocks": 3,
+      "manuscript": "04_JWT_Access_Refresh/26_Access_Token_Nasil_Uretilir_ve_Dogrulanir.md"
+    },
+    {
+      "number": 27,
+      "chapter": "04_JWT_Access_Refresh/27_Access_Token_Omru_Neden_Kisa_Tutulur",
+      "heading": "Access Token (Erişim Belirteci) Ömrü Neden Kısa Tutulur?",
+      "complete_examples": [],
+      "code_blocks": 3,
+      "js_blocks": 1,
+      "manuscript": "04_JWT_Access_Refresh/27_Access_Token_Omru_Neden_Kisa_Tutulur.md"
+    },
+    {
+      "number": 28,
+      "chapter": "04_JWT_Access_Refresh/28_Refresh_Token_Hangi_Problemi_Cozer",
+      "heading": "Refresh Token (Yenileme Belirteci) Hangi Problemi Çözer?",
+      "complete_examples": [],
+      "code_blocks": 3,
+      "js_blocks": 1,
+      "manuscript": "04_JWT_Access_Refresh/28_Refresh_Token_Hangi_Problemi_Cozer.md"
+    },
+    {
+      "number": 29,
+      "chapter": "04_JWT_Access_Refresh/29_Refresh_Tokeni_Veritabaninda_Neden_Takip_Etmek_Isteyebiliriz",
+      "heading": "Refresh Token'ı Veritabanında Neden Takip Etmek İsteyebiliriz?",
+      "complete_examples": [
+        "src/db/models/refreshToken.js"
+      ],
+      "code_blocks": 3,
+      "js_blocks": 2,
+      "manuscript": "04_JWT_Access_Refresh/29_Refresh_Tokeni_Veritabaninda_Neden_Takip_Etmek_Isteyebiliriz.md"
+    },
+    {
+      "number": 30,
+      "chapter": "04_JWT_Access_Refresh/30_Access_ve_Refresh_Tokeni_Cookie_ile_Nasil_Tasiriz",
+      "heading": "Access ve Refresh Token'ı Cookie (Çerez) ile Nasıl Taşırız?",
+      "complete_examples": [
+        "src/utils/authCookies.js"
+      ],
+      "code_blocks": 6,
+      "js_blocks": 4,
+      "manuscript": "04_JWT_Access_Refresh/30_Access_ve_Refresh_Tokeni_Cookie_ile_Nasil_Tasiriz.md"
+    },
+    {
+      "number": 31,
+      "chapter": "04_JWT_Access_Refresh/31_POST_Auth_Refresh_ile_Yeni_Access_Token_Nasil_Uretilir",
+      "heading": "POST /auth/refresh ile Yeni Erişim Belirteci Nasıl Üretilir?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 3,
+      "manuscript": "04_JWT_Access_Refresh/31_POST_Auth_Refresh_ile_Yeni_Access_Token_Nasil_Uretilir.md"
+    },
+    {
+      "number": 32,
+      "chapter": "04_JWT_Access_Refresh/32_Refresh_Token_Rotation_Nedir",
+      "heading": "Refresh Token Rotation (Yenileme Belirteci Döndürme) Nedir?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 4,
+      "manuscript": "04_JWT_Access_Refresh/32_Refresh_Token_Rotation_Nedir.md"
+    },
+    {
+      "number": 33,
+      "chapter": "04_JWT_Access_Refresh/33_Calinmis_Refresh_Token_Tekrar_Kullanilirsa_Ne_Yapmaliyiz",
+      "heading": "Çalınmış Yenileme Belirteci Tekrar Kullanılırsa Ne Yapmalıyız?",
+      "complete_examples": [],
+      "code_blocks": 4,
+      "js_blocks": 2,
+      "manuscript": "04_JWT_Access_Refresh/33_Calinmis_Refresh_Token_Tekrar_Kullanilirsa_Ne_Yapmaliyiz.md"
+    },
+    {
+      "number": 34,
+      "chapter": "04_JWT_Access_Refresh/34_Session_mi_JWT_mi_Iki_Farkli_Mimariyi_Karsilastiralim",
+      "heading": "Session (Oturum) mı JWT mi? İki Mimariyi Karşılaştıralım",
+      "complete_examples": [],
+      "code_blocks": 1,
+      "js_blocks": 0,
+      "manuscript": "04_JWT_Access_Refresh/34_Session_mi_JWT_mi_Iki_Farkli_Mimariyi_Karsilastiralim.md"
+    },
+    {
+      "number": 35,
+      "chapter": "05_Authentication_Authorization/35_Authentication_Middleware_Kullaniciyi_Requeste_Nasil_Ekler",
+      "heading": "Authentication Middleware (Kimlik Doğrulama Ara Katmanı) Kullanıcıyı İsteğe Nasıl Ekler?",
+      "complete_examples": [
+        "src/middlewares/authenticate.js",
+        "src/controllers/users.js",
+        "src/routers/users.js"
+      ],
+      "code_blocks": 6,
+      "js_blocks": 5,
+      "manuscript": "05_Authentication_Authorization/35_Authentication_Middleware_Kullaniciyi_Requeste_Nasil_Ekler.md"
+    },
+    {
+      "number": 36,
+      "chapter": "05_Authentication_Authorization/36_Req_User_Nereden_Gelir_ve_Neden_Controllerin_Isi_Degildir",
+      "heading": "`req.user` Nereden Gelir? Kimlik Kontrolü Neden Controller'ın İşi Değildir?",
+      "complete_examples": [],
+      "code_blocks": 6,
+      "js_blocks": 5,
+      "manuscript": "05_Authentication_Authorization/36_Req_User_Nereden_Gelir_ve_Neden_Controllerin_Isi_Degildir.md"
+    },
+    {
+      "number": 37,
+      "chapter": "05_Authentication_Authorization/37_Authorization_Nedir_ve_Authenticationdan_Neden_Ayridir",
+      "heading": "Yetkilendirme (Authorization) Nedir ve Kimlik Doğrulamadan Neden Farklıdır?",
+      "complete_examples": [],
+      "code_blocks": 2,
+      "js_blocks": 0,
+      "manuscript": "05_Authentication_Authorization/37_Authorization_Nedir_ve_Authenticationdan_Neden_Ayridir.md"
+    },
+    {
+      "number": 38,
+      "chapter": "05_Authentication_Authorization/38_Role_Tabanli_Yetkilendirme_Nasil_Kurulur",
+      "heading": "Rol Tabanlı Yetkilendirme (Role-Based Authorization) Nasıl Kurulur?",
+      "complete_examples": [
+        "src/middlewares/requireRole.js",
+        "src/routers/admin.js"
+      ],
+      "code_blocks": 7,
+      "js_blocks": 5,
+      "manuscript": "05_Authentication_Authorization/38_Role_Tabanli_Yetkilendirme_Nasil_Kurulur.md"
+    },
+    {
+      "number": 39,
+      "chapter": "05_Authentication_Authorization/39_Admin_Olmak_Her_Kaynaga_Erisim_Demek_midir",
+      "heading": "Yönetici (Admin) Olmak Her Kaynağa Erişim Demek midir?",
+      "complete_examples": [],
+      "code_blocks": 1,
+      "js_blocks": 1,
+      "manuscript": "05_Authentication_Authorization/39_Admin_Olmak_Her_Kaynaga_Erisim_Demek_midir.md"
+    },
+    {
+      "number": 40,
+      "chapter": "05_Authentication_Authorization/40_Ownership_Nedir_Kullanici_Yalnizca_Kendi_Verisini_Nasil_Degistirir",
+      "heading": "Sahiplik (Ownership): Kullanıcı Yalnızca Kendi Verisini Nasıl Değiştirir?",
+      "complete_examples": [],
+      "code_blocks": 3,
+      "js_blocks": 1,
+      "manuscript": "05_Authentication_Authorization/40_Ownership_Nedir_Kullanici_Yalnizca_Kendi_Verisini_Nasil_Degistirir.md"
+    },
+    {
+      "number": 41,
+      "chapter": "05_Authentication_Authorization/41_403_Forbidden_ile_404_Not_Found_Arasinda_Guvenlik_Acisindan_Nasil_Karar_Verilir",
+      "heading": "403 Forbidden (Erişim Yasak) ile 404 Not Found (Bulunamadı) Arasında Nasıl Karar Veririz?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 1,
+      "manuscript": "05_Authentication_Authorization/41_403_Forbidden_ile_404_Not_Found_Arasinda_Guvenlik_Acisindan_Nasil_Karar_Verilir.md"
+    },
+    {
+      "number": 42,
+      "chapter": "05_Authentication_Authorization/42_Movie_Kaynaklarina_Owner_Alani_Nasil_Eklenir",
+      "heading": "Movie Kaynaklarına Sahiplik (`owner`) Alanı Nasıl Eklenir?",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 7,
+      "manuscript": "05_Authentication_Authorization/42_Movie_Kaynaklarina_Owner_Alani_Nasil_Eklenir.md"
+    },
+    {
+      "number": 43,
+      "chapter": "05_Authentication_Authorization/43_User_Scope_ile_Listeleme_Sorgulari_Nasil_Sinirlandirilir",
+      "heading": "Kullanıcı Kapsamı (User Scope) ile Listeleme Sorgularını Nasıl Sınırlandırırız?",
+      "complete_examples": [],
+      "code_blocks": 9,
+      "js_blocks": 6,
+      "manuscript": "05_Authentication_Authorization/43_User_Scope_ile_Listeleme_Sorgulari_Nasil_Sinirlandirilir.md"
+    },
+    {
+      "number": 44,
+      "chapter": "06_Hesap_Yasam_Dongusu/44_Hesap_Acildi_Ama_Eposta_Adresi_Gercek_mi",
+      "heading": "Ada Hesap Açtı; E-posta Adresinin Ona Ait Olduğunu Nasıl Anlarız?",
+      "complete_examples": [
+        "src/middlewares/requireVerifiedEmail.js"
+      ],
+      "code_blocks": 5,
+      "js_blocks": 4,
+      "manuscript": "06_Hesap_Yasam_Dongusu/44_Hesap_Acildi_Ama_Eposta_Adresi_Gercek_mi.md"
+    },
+    {
+      "number": 45,
+      "chapter": "06_Hesap_Yasam_Dongusu/45_Eposta_Dogrulama_Tokeni_Nasil_Tasarlanir",
+      "heading": "E-posta Doğrulama Belirteci (Token) Nasıl Tasarlanır?",
+      "complete_examples": [
+        "src/db/models/accountToken.js"
+      ],
+      "code_blocks": 5,
+      "js_blocks": 4,
+      "manuscript": "06_Hesap_Yasam_Dongusu/45_Eposta_Dogrulama_Tokeni_Nasil_Tasarlanir.md"
+    },
+    {
+      "number": 46,
+      "chapter": "06_Hesap_Yasam_Dongusu/46_Dogrulama_Linki_Neden_Sureli_ve_Tek_Kullanimlik_Olmalidir",
+      "heading": "E-posta Doğrulama Bağlantısı Neden Süreli ve Tek Kullanımlık Olmalı?",
+      "complete_examples": [
+        "src/services/accountTokens.js"
+      ],
+      "code_blocks": 7,
+      "js_blocks": 5,
+      "manuscript": "06_Hesap_Yasam_Dongusu/46_Dogrulama_Linki_Neden_Sureli_ve_Tek_Kullanimlik_Olmalidir.md"
+    },
+    {
+      "number": 47,
+      "chapter": "06_Hesap_Yasam_Dongusu/47_Parolami_Unuttum_Akisi_Backendde_Nasil_Baslar",
+      "heading": "Parolamı Unuttum İsteği Nereden Başlamalı?",
+      "complete_examples": [],
+      "code_blocks": 7,
+      "js_blocks": 1,
+      "manuscript": "06_Hesap_Yasam_Dongusu/47_Parolami_Unuttum_Akisi_Backendde_Nasil_Baslar.md"
+    },
+    {
+      "number": 48,
+      "chapter": "06_Hesap_Yasam_Dongusu/48_Password_Reset_Tokeni_Nasil_Guvenli_Saklanir",
+      "heading": "Parola Sıfırlama Belirtecini Nasıl Güvenli Saklarız?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 3,
+      "manuscript": "06_Hesap_Yasam_Dongusu/48_Password_Reset_Tokeni_Nasil_Guvenli_Saklanir.md"
+    },
+    {
+      "number": 49,
+      "chapter": "06_Hesap_Yasam_Dongusu/49_Yeni_Parola_Belirlenince_Eski_Oturumlara_Ne_Olmali",
+      "heading": "Yeni Parola Belirlenince Eski Oturumlara Ne Olmalı?",
+      "complete_examples": [],
+      "code_blocks": 5,
+      "js_blocks": 5,
+      "manuscript": "06_Hesap_Yasam_Dongusu/49_Yeni_Parola_Belirlenince_Eski_Oturumlara_Ne_Olmali.md"
+    },
+    {
+      "number": 50,
+      "chapter": "06_Hesap_Yasam_Dongusu/50_Eposta_Gonderme_Isini_Controllerdan_Nasil_Ayiririz",
+      "heading": "E-posta Gönderimini Controller'dan Nasıl Ayırırız?",
+      "complete_examples": [
+        "src/services/email.js",
+        "src/utils/accountEmails.js"
+      ],
+      "code_blocks": 13,
+      "js_blocks": 10,
+      "manuscript": "06_Hesap_Yasam_Dongusu/50_Eposta_Gonderme_Isini_Controllerdan_Nasil_Ayiririz.md"
+    },
+    {
+      "number": 51,
+      "chapter": "06_Hesap_Yasam_Dongusu/51_Hesap_Silme_ve_Hesap_Devre_Disi_Birakma_Ayni_Sey_midir",
+      "heading": "Hesap Silme ve Hesap Devre Dışı Bırakma Aynı Şey midir?",
+      "complete_examples": [],
+      "code_blocks": 10,
+      "js_blocks": 7,
+      "manuscript": "06_Hesap_Yasam_Dongusu/51_Hesap_Silme_ve_Hesap_Devre_Disi_Birakma_Ayni_Sey_midir.md"
+    },
+    {
+      "number": 52,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/52_Kullanici_Profili_Icin_PATCH_Users_Me_Nasil_Tasarlanir",
+      "heading": "Kullanıcı Profili İçin `PATCH /users/me` Nasıl Tasarlanır?",
+      "complete_examples": [],
+      "code_blocks": 14,
+      "js_blocks": 7,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/52_Kullanici_Profili_Icin_PATCH_Users_Me_Nasil_Tasarlanir.md"
+    },
+    {
+      "number": 53,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/53_Kullaniciya_Ait_Watchlist_Verisi_Nasil_Modellenir",
+      "heading": "Kullanıcıya Ait Watchlist Verisini Nasıl Modelleriz?",
+      "complete_examples": [],
+      "code_blocks": 14,
+      "js_blocks": 6,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/53_Kullaniciya_Ait_Watchlist_Verisi_Nasil_Modellenir.md"
+    },
+    {
+      "number": 54,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/54_Ayni_Film_Watchliste_Iki_Kez_Eklenirse_Ne_Olmali",
+      "heading": "Aynı Film Watchlist'e İki Kez Eklenirse Ne Olmalı?",
+      "complete_examples": [],
+      "code_blocks": 10,
+      "js_blocks": 4,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/54_Ayni_Film_Watchliste_Iki_Kez_Eklenirse_Ne_Olmali.md"
+    },
+    {
+      "number": 55,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/55_Review_ve_Rating_Verisi_Embedded_mi_Referenced_mi_Tutulmali",
+      "heading": "Review ve Rating Verisini Embedded mı Referenced mı Tutmalıyız?",
+      "complete_examples": [],
+      "code_blocks": 12,
+      "js_blocks": 5,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/55_Review_ve_Rating_Verisi_Embedded_mi_Referenced_mi_Tutulmali.md"
+    },
+    {
+      "number": 56,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/56_Multipart_Form_Data_Nedir_ve_JSONdan_Neden_Farklidir",
+      "heading": "`multipart/form-data` Nedir ve JSON'dan Neden Farklıdır?",
+      "complete_examples": [],
+      "code_blocks": 13,
+      "js_blocks": 2,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/56_Multipart_Form_Data_Nedir_ve_JSONdan_Neden_Farklidir.md"
+    },
+    {
+      "number": 57,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/57_Multer_ile_Dosya_Upload_Akisi_Nasil_Kurulur",
+      "heading": "Multer ile Dosya Upload Akışı Nasıl Kurulur?",
+      "complete_examples": [
+        "src/middlewares/uploadAvatar.js"
+      ],
+      "code_blocks": 13,
+      "js_blocks": 3,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/57_Multer_ile_Dosya_Upload_Akisi_Nasil_Kurulur.md"
+    },
+    {
+      "number": 58,
+      "chapter": "07_Kullanici_Kaynaklari_Upload/58_Dosyayi_Diskte_mi_Bulutta_mi_Saklamaliyiz",
+      "heading": "Dosyayı Diskte mi Bulutta mı Saklamalıyız?",
+      "complete_examples": [],
+      "code_blocks": 9,
+      "js_blocks": 1,
+      "manuscript": "07_Kullanici_Kaynaklari_Upload/58_Dosyayi_Diskte_mi_Bulutta_mi_Saklamaliyiz.md"
+    },
+    {
+      "number": 59,
+      "chapter": "08_Test_Guvenlik_Production/59_Authentication_Kodunu_Manuel_Test_Etmek_Neden_Yetmez",
+      "heading": "Authentication Kodunu Manuel Test Etmek Neden Yetmez?",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 0,
+      "manuscript": "08_Test_Guvenlik_Production/59_Authentication_Kodunu_Manuel_Test_Etmek_Neden_Yetmez.md"
+    },
+    {
+      "number": 60,
+      "chapter": "08_Test_Guvenlik_Production/60_Node_Test_Runner_ile_Ilk_Otomatik_Testimizi_Nasil_Yazariz",
+      "heading": "Node Test Runner ile İlk Otomatik Testimizi Nasıl Yazarız?",
+      "complete_examples": [
+        "test/password.test.js"
+      ],
+      "code_blocks": 13,
+      "js_blocks": 7,
+      "manuscript": "08_Test_Guvenlik_Production/60_Node_Test_Runner_ile_Ilk_Otomatik_Testimizi_Nasil_Yazariz.md"
+    },
+    {
+      "number": 61,
+      "chapter": "08_Test_Guvenlik_Production/61_Supertest_ile_Express_Endpointlerini_Nasil_Test_Ederiz",
+      "heading": "Supertest ile Express Endpoint'lerini Nasıl Test Ederiz?",
+      "complete_examples": [],
+      "code_blocks": 13,
+      "js_blocks": 8,
+      "manuscript": "08_Test_Guvenlik_Production/61_Supertest_ile_Express_Endpointlerini_Nasil_Test_Ederiz.md"
+    },
+    {
+      "number": 62,
+      "chapter": "08_Test_Guvenlik_Production/62_Register_Login_Logout_Akisini_Bastan_Sona_Nasil_Test_Ederiz",
+      "heading": "Register, Login, Logout Akışını Baştan Sona Nasıl Test Ederiz?",
+      "complete_examples": [],
+      "code_blocks": 9,
+      "js_blocks": 6,
+      "manuscript": "08_Test_Guvenlik_Production/62_Register_Login_Logout_Akisini_Bastan_Sona_Nasil_Test_Ederiz.md"
+    },
+    {
+      "number": 63,
+      "chapter": "08_Test_Guvenlik_Production/63_Protected_Route_ve_Authorization_Testleri_Nasil_Yazilir",
+      "heading": "Protected Route ve Authorization Testleri Nasıl Yazılır?",
+      "complete_examples": [],
+      "code_blocks": 14,
+      "js_blocks": 7,
+      "manuscript": "08_Test_Guvenlik_Production/63_Protected_Route_ve_Authorization_Testleri_Nasil_Yazilir.md"
+    },
+    {
+      "number": 64,
+      "chapter": "08_Test_Guvenlik_Production/64_Test_Veritabani_Neden_Production_Veritabanindan_Ayri_Olmalidir",
+      "heading": "Test Veritabanı Neden Production Veritabanından Ayrı Olmalıdır?",
+      "complete_examples": [],
+      "code_blocks": 8,
+      "js_blocks": 5,
+      "manuscript": "08_Test_Guvenlik_Production/64_Test_Veritabani_Neden_Production_Veritabanindan_Ayri_Olmalidir.md"
+    },
+    {
+      "number": 65,
+      "chapter": "08_Test_Guvenlik_Production/65_CSRF_Nedir_ve_Cookie_Tabanli_Authenticationi_Neden_Ilgilendirir",
+      "heading": "CSRF Nedir ve Cookie Tabanlı Authentication'ı Neden İlgilendirir?",
+      "complete_examples": [],
+      "code_blocks": 10,
+      "js_blocks": 2,
+      "manuscript": "08_Test_Guvenlik_Production/65_CSRF_Nedir_ve_Cookie_Tabanli_Authenticationi_Neden_Ilgilendirir.md"
+    },
+    {
+      "number": 66,
+      "chapter": "08_Test_Guvenlik_Production/66_Race_Condition_Nedir_Unique_Index_Tek_Basina_Hangi_Problemi_Cozer",
+      "heading": "Race Condition Nedir? Unique Index Tek Başına Hangi Problemi Çözer?",
+      "complete_examples": [],
+      "code_blocks": 12,
+      "js_blocks": 6,
+      "manuscript": "08_Test_Guvenlik_Production/66_Race_Condition_Nedir_Unique_Index_Tek_Basina_Hangi_Problemi_Cozer.md"
+    },
+    {
+      "number": 67,
+      "chapter": "08_Test_Guvenlik_Production/67_MongoDB_Transaction_Ne_Zaman_Gercekte_Gereklidir",
+      "heading": "MongoDB Transaction Ne Zaman Gerçekten Gereklidir?",
+      "complete_examples": [],
+      "code_blocks": 7,
+      "js_blocks": 3,
+      "manuscript": "08_Test_Guvenlik_Production/67_MongoDB_Transaction_Ne_Zaman_Gercekte_Gereklidir.md"
+    },
+    {
+      "number": 68,
+      "chapter": "08_Test_Guvenlik_Production/68_Audit_Log_ile_Guvenlik_Acisindan_Onemli_Islemleri_Nasil_Izleriz",
+      "heading": "Audit Log ile Güvenlik Açısından Önemli İşlemleri Nasıl İzleriz?",
+      "complete_examples": [
+        "src/constants/auditEvents.js"
+      ],
+      "code_blocks": 7,
+      "js_blocks": 3,
+      "manuscript": "08_Test_Guvenlik_Production/68_Audit_Log_ile_Guvenlik_Acisindan_Onemli_Islemleri_Nasil_Izleriz.md"
+    },
+    {
+      "number": 69,
+      "chapter": "08_Test_Guvenlik_Production/69_Authentication_Sistemini_Productiona_Almadan_Once_Neleri_Kontrol_Etmeliyiz",
+      "heading": "Authentication Sistemini Production'a Almadan Önce Neleri Kontrol Etmeliyiz?",
+      "complete_examples": [],
+      "code_blocks": 15,
+      "js_blocks": 1,
+      "manuscript": "08_Test_Guvenlik_Production/69_Authentication_Sistemini_Productiona_Almadan_Once_Neleri_Kontrol_Etmeliyiz.md"
+    },
+    {
+      "number": 70,
+      "chapter": "08_Test_Guvenlik_Production/70_Final_Proje_Movie_APIyi_Kullanicili_ve_Guvenli_Bir_Backend_Sistemine_Nasil_Donustururuz",
+      "heading": "Final Proje: Movie API'yi Kullanıcılı ve Güvenli Bir Backend Sistemine Nasıl Dönüştürürüz?",
+      "complete_examples": [],
+      "code_blocks": 23,
+      "js_blocks": 0,
+      "manuscript": "08_Test_Guvenlik_Production/70_Final_Proje_Movie_APIyi_Kullanicili_ve_Guvenli_Bir_Backend_Sistemine_Nasil_Donustururuz.md"
+    }
+  ]
+}

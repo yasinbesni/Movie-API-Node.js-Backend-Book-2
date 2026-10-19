@@ -1,0 +1,9 @@
+# 63. Bölüm — Protected Route ve Authorization Testleri Nasıl Yazılır?
+
+**Kitaptaki bölüm:** `08_Test_Guvenlik_Production/63_Protected_Route_ve_Authorization_Testleri_Nasil_Yazilir.md`
+
+Kitaptaki 63. bölümü okuyup değişiklikleri kendi Movie API çalışma kopyanıza uygulayın. Kod ve HTTP örneklerini `kod_ornekleri.md` dosyasından karşılaştırabilirsiniz.
+
+Bu bölüm için bağımsız bir tam dosya örneği yok. Gerekli açıklamalar ve varsa eklenecek parçalar `kod_ornekleri.md` içinde.
+
+Bu klasör, **aynı projede yaptığımız 63. adımı** gösterir. Uygulamanın bütünü veya baştan kurulacak farklı bir proje değildir. Başlangıç kopyasının nasıl hazırlanacağı kod deposunun ana README dosyasında anlatılıyor.

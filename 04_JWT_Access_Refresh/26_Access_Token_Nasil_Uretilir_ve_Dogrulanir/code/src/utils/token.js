@@ -1,0 +1,31 @@
+import jwt from "jsonwebtoken";
+import { env } from "../config/env.js";
+
+export const createAccessToken = (userId) =>
+  jwt.sign(
+    { sub: userId },
+    env.jwtAccessSecret,
+    {
+      algorithm: "HS256",
+      expiresIn: "15m",
+    },
+  );
+
+export const verifyAccessToken = (token) => {
+  const payload = jwt.verify(
+    token,
+    env.jwtAccessSecret,
+    { algorithms: ["HS256"] },
+  );
+
+  if (
+    !payload ||
+    typeof payload !== "object" ||
+    typeof payload.sub !== "string" ||
+    !payload.sub
+  ) {
+    throw new Error("Geçersiz erişim belirteci.");
+  }
+
+  return payload;
+};
