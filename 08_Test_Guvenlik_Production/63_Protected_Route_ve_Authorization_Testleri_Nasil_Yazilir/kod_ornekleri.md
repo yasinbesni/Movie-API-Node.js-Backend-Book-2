@@ -38,7 +38,7 @@ const agent = await loginAsUser({
 
 ```js
 const response = await agent
-  .delete("/admin/movies/...");
+  .get("/admin/access-check");
 
 assert.equal(response.status, 403);
 ```
@@ -91,7 +91,7 @@ assert.equal(
 ### Örnek 9 — http
 
 ```http
-GET /movies
+GET /users/me/movies
 ```
 
 ### Örnek 10 — text
