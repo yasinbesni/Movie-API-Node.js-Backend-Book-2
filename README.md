@@ -12,6 +12,8 @@
 
 Bölümleri sırasıyla okuyun ve yaptığınız değişiklikleri **hep aynı çalışma kopyasına** uygulayın. Örneğin 5. bölümde `User` modelini, 6. bölümde kayıt doğrulamasını ekleyeceğiz. Bu dosyalar başlangıç projesinde hazır değil.
 
+**Ortam değişkenleri:** Deponun kökündeki `.env.example` genel bir başvuru şablonudur. Çalıştıracağınız `movie-api/` klasörünün içindeki `.env.example` dosyasını aynı klasörde `.env` adıyla kopyalayıp kendi test veritabanı bilgilerinizi yazın. İlerleyen bölümlerde `SESSION_SECRET` ve `JWT_ACCESS_SECRET` eklenir; bunları ilgili aşamaya gelmeden zorunlu kabul etmeyin. `.env` dosyanızı Git deposuna göndermeyin.
+
 ## Klasörleri nasıl okuyacağım?
 
 Her numaralı klasördeki `README.md` ilgili adıma kısa bir giriş sunar; `kod_ornekleri.md` kitaptaki kod ve HTTP örneklerini sırayla içerir. `code/` klasörü varsa yalnızca o aşamada ele alınan **tam dosya örnekleri** vardır. Bazı değişiklikler mevcut dosyaya eklenecek kod parçalarıdır; bunları tek başlarına yeni uygulama gibi çalıştırmayın.
