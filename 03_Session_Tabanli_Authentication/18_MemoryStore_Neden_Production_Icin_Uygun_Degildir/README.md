@@ -1,4 +1,4 @@
-# 18. Bölüm — MemoryStore (Bellek Deposu) Neden Production İçin Uygun Değildir?
+# 18. Bölüm — Oturumları Bellekte Tutmak Neden Canlı Ortam İçin Yeterli Değil?
 
 **Kitaptaki bölüm:** `03_Session_Tabanli_Authentication/18_MemoryStore_Neden_Production_Icin_Uygun_Degildir.md`
 

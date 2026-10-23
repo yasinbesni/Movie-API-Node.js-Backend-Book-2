@@ -5,7 +5,7 @@ Bu örnekleri bölümdeki sırayla, **kendi Movie API çalışma kopyanıza** uy
 ### Örnek 1 — text
 
 ```text
-Tarayıcı → sid → Oturum deposu → userId
+Tarayıcı → sid → Sunucudaki oturum kaydı → userId
 ```
 
 ### Örnek 2 — text
