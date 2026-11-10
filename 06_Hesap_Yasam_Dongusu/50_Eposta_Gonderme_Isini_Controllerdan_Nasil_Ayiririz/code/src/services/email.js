@@ -8,11 +8,12 @@ const transporter = nodemailer.createTransport({
   auth: { user: env.smtpUser, pass: env.smtpPass },
 });
 
-export const sendEmail = ({ to, subject, text, html }) =>
+export const sendEmail = ({ to, subject, text, html, replyTo }) =>
   transporter.sendMail({
     from: env.emailFrom,
     to,
     subject,
     text,
     html,
+    ...(replyTo ? { replyTo } : {}),
   });

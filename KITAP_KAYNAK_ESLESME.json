@@ -1,0 +1,422 @@
+[
+  {
+    "number": 1,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/01_Kullanicilar_Geldiginde_API_Neden_Degisir.md",
+    "sha256": "1e0eab15602bf063ca13ac70953e1dac1c0776b2d0feef5760ff8e88721f9665",
+    "code_blocks": 10
+  },
+  {
+    "number": 2,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/02_Kimlik_Authentication_Session_Authorization.md",
+    "sha256": "06984778acfc40fb182628e52f72f6727aeb1d01ad90efbba4a205b93aafca79",
+    "code_blocks": 8
+  },
+  {
+    "number": 3,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/03_User_Document_Hangi_Veriler.md",
+    "sha256": "75fefdcced331ac7284960bff3b25a853be8e26000ada2f564ca9823eee29603",
+    "code_blocks": 9
+  },
+  {
+    "number": 4,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/04_Email_Normalization_Unique.md",
+    "sha256": "3f918ab17d460538caee58649baf81119291e44cb7e9bf9b02abdf58abeaf7e1",
+    "code_blocks": 12
+  },
+  {
+    "number": 5,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/05_User_Schema_Model.md",
+    "sha256": "98cdd49f53a21a711267d7286e5e22fc34925e777a00939c158d9696308eec1d",
+    "code_blocks": 12
+  },
+  {
+    "number": 6,
+    "manuscript": "Node.js-Backend-Book-2-main/01_Kullanicili_API/06_Register_Joi_Sozlesmesi.md",
+    "sha256": "e7a78baeb9c4f7c9631e3822c7ef3579136802765f03985627efeb06ab6b80be",
+    "code_blocks": 11
+  },
+  {
+    "number": 7,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/07_Parola_Neden_Siradan_Alan_Degildir.md",
+    "sha256": "61a70d3c43f49abd5feee18be29a426e6e3052e4123a72eea786097757bb63f1",
+    "code_blocks": 2
+  },
+  {
+    "number": 8,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/08_Hashing_Encryption_Salt_Pepper.md",
+    "sha256": "a30ee3fd072c2c7714dc34f56d84c6c2a28b84e1761c3a461cdea31d40f4adc8",
+    "code_blocks": 4
+  },
+  {
+    "number": 9,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/09_Argon2id_Hash_Verify.md",
+    "sha256": "985db32645b0b03ac25d33f7963e449aee395a52358dcb66bd62bba969d2afd8",
+    "code_blocks": 6
+  },
+  {
+    "number": 10,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/10_Register_Endpoint_Guvenli_Kayit.md",
+    "sha256": "2df8f475a80ac74efeb3dbf48585fa8edd4341d796462fcb2206a413e3224c68",
+    "code_blocks": 16
+  },
+  {
+    "number": 11,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/11_Kullanici_Giris_Yaparken_Backend_Gercekte_Neyi_Dogrular.md",
+    "sha256": "abfe786e9e4759fd1cb7c3e0c6e3b60de0e20b33e167ad1264af04e814f91372",
+    "code_blocks": 10
+  },
+  {
+    "number": 12,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/12_Login_Hatalarinda_Neden_Fazla_Bilgi_Vermemeliyiz.md",
+    "sha256": "f7af5ba7ac124f1365b9fc94b1eac7cde310cfd4feb92da5a2cc6f584be3bfd6",
+    "code_blocks": 8
+  },
+  {
+    "number": 13,
+    "manuscript": "Node.js-Backend-Book-2-main/02_Parola_Guvenligi/13_POST_Auth_Login_Endpointini_Nasil_Kurariz.md",
+    "sha256": "896e4c3110d1481e3c765f94fe7fa19249d2102102228edb88919f690ba4cf35",
+    "code_blocks": 9
+  },
+  {
+    "number": 14,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/14_Giris_Yaptik_Ama_Sonraki_Requestte_Kullaniciyi_Nasil_Hatirlayacagiz.md",
+    "sha256": "69ddc4f5e95ea0804f035738dc8bcaf4e3314adc73bcb463b31054a513f88948",
+    "code_blocks": 3
+  },
+  {
+    "number": 15,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/15_Cookie_Nedir_ve_Tarayici_Onu_Requeste_Nasil_Ekler.md",
+    "sha256": "e96da05b104aa21008808b8a16509c7cae96d2f21b524d9b02eb986d8fe89e42",
+    "code_blocks": 4
+  },
+  {
+    "number": 16,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/16_Session_Nedir_ve_Session_ID_Neden_Kullanilir.md",
+    "sha256": "c7ba8c0ff7a32bfd96f5fa03d5c79ac12ab2b2d25184bbb5cf732390c5cd0d23",
+    "code_blocks": 3
+  },
+  {
+    "number": 17,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/17_Express_Session_ile_Ilk_Oturumumuzu_Nasil_Olustururuz.md",
+    "sha256": "f27ca9c7a75855a384db6e7f0db1d4966a4e88dd12b4095e0fbef71ad5841294",
+    "code_blocks": 8
+  },
+  {
+    "number": 18,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/18_MemoryStore_Neden_Production_Icin_Uygun_Degildir.md",
+    "sha256": "3490915bc0e1658f5e28845aee215131156d3db530ecf4bcf9116a01c49ba805",
+    "code_blocks": 2
+  },
+  {
+    "number": 19,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/19_Session_Verisini_MongoDBde_Nasil_Saklariz.md",
+    "sha256": "5d7659ec1ee2c0e9d09956a5dce6ca5729de9219168fc7fe7e3dcd24353aa7cc",
+    "code_blocks": 5
+  },
+  {
+    "number": 20,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/20_HttpOnly_Secure_ve_SameSite_Cookie_Ayarlari_Neyi_Korur.md",
+    "sha256": "9ca414e51232221eebd90d30cb341f99b56995161f2920d28638ef7a4b2d6345",
+    "code_blocks": 6
+  },
+  {
+    "number": 21,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/21_Logout_Sirasinda_Session_Nasil_Gercekte_Sonlandirilir.md",
+    "sha256": "18f22e22600fb3417c8645670af03507874812718cb1ba1e2fd38bfae5a719dd",
+    "code_blocks": 6
+  },
+  {
+    "number": 22,
+    "manuscript": "Node.js-Backend-Book-2-main/03_Session_Tabanli_Authentication/22_Session_Fixation_Nedir_ve_Login_Sonrasi_Session_ID_Neden_Yenilenir.md",
+    "sha256": "838e5d44e258015d38d43fe3535412493dce681abe70951ac31ed03fa43e4c01",
+    "code_blocks": 3
+  },
+  {
+    "number": 23,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/23_Session_Calisiyorsa_Neden_JWT_Diye_Baska_Bir_Yontem_Var.md",
+    "sha256": "9cc60b4a3c0d74cb702cb49d4f148eba5e7e6a3f75544dbebbf77be3ebc51cc8",
+    "code_blocks": 1
+  },
+  {
+    "number": 24,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/24_JWT_Gercekte_Nedir_Header_Payload_Signature_Ne_Anlatir.md",
+    "sha256": "0e509999aba59eb45d658046192b0e660d108f5730109a437523a0c51e28ec0f",
+    "code_blocks": 3
+  },
+  {
+    "number": 25,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/25_Signed_Token_Neden_Encrypted_Token_Demek_Degildir.md",
+    "sha256": "4f4676e22fe70b861a82ff249517164bbfffedba8c18f2c026ea0ed10a67f565",
+    "code_blocks": 2
+  },
+  {
+    "number": 26,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/26_Access_Token_Nasil_Uretilir_ve_Dogrulanir.md",
+    "sha256": "d929155f9f43331673757298f8b0452c74b82a153e19558341d2ab14a5b30d10",
+    "code_blocks": 6
+  },
+  {
+    "number": 27,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/27_Access_Token_Omru_Neden_Kisa_Tutulur.md",
+    "sha256": "3c342ae814814917d0cd1f334433de1c8ac1edb97555118b59cb0bc1c9d0790e",
+    "code_blocks": 3
+  },
+  {
+    "number": 28,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/28_Refresh_Token_Hangi_Problemi_Cozer.md",
+    "sha256": "92d2c85ab09065cefd912f0603d94ba039342ca500224b22780d30ba604e10b7",
+    "code_blocks": 3
+  },
+  {
+    "number": 29,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/29_Refresh_Tokeni_Veritabaninda_Neden_Takip_Etmek_Isteyebiliriz.md",
+    "sha256": "8e467fa2dce017fefe117becc78e82e151842e869dcadc44c97192bfe81c1781",
+    "code_blocks": 3
+  },
+  {
+    "number": 30,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/30_Access_ve_Refresh_Tokeni_Cookie_ile_Nasil_Tasiriz.md",
+    "sha256": "8473bc7bb30e3f442267f4a1aeb2d50e2e488f1e8ed842a715fbb9b981ddc93a",
+    "code_blocks": 7
+  },
+  {
+    "number": 31,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/31_POST_Auth_Refresh_ile_Yeni_Access_Token_Nasil_Uretilir.md",
+    "sha256": "2a660cb67ae535c8ff8606366d84443488e2f4bc1b10aea47b31c323ad87b34c",
+    "code_blocks": 4
+  },
+  {
+    "number": 32,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/32_Refresh_Token_Rotation_Nedir.md",
+    "sha256": "639f513506d621c5054e2f9efe502d078e0abfa0ae517e0c1ac69bb9e4c1195c",
+    "code_blocks": 5
+  },
+  {
+    "number": 33,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/33_Calinmis_Refresh_Token_Tekrar_Kullanilirsa_Ne_Yapmaliyiz.md",
+    "sha256": "b7fed5a60664edcdbdc329a311aede7fa812c1dcdd1fe0da8c1cdf2dd31dc1d3",
+    "code_blocks": 4
+  },
+  {
+    "number": 34,
+    "manuscript": "Node.js-Backend-Book-2-main/04_JWT_Access_Refresh/34_Session_mi_JWT_mi_Iki_Farkli_Mimariyi_Karsilastiralim.md",
+    "sha256": "1412bd62032b7063e9f9dbb8ae0750622fd065d7531160461aab6063bae2f558",
+    "code_blocks": 1
+  },
+  {
+    "number": 35,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/35_Authentication_Middleware_Kullaniciyi_Requeste_Nasil_Ekler.md",
+    "sha256": "7572f14408beb82e3f361321072400960a0428fe8eda92c4e7f02668d068de6e",
+    "code_blocks": 6
+  },
+  {
+    "number": 36,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/36_Req_User_Nereden_Gelir_ve_Neden_Controllerin_Isi_Degildir.md",
+    "sha256": "9c3cfbc4f60924291dfd2daec877204f448399928ca8f8109a0b8c00b0c8fb96",
+    "code_blocks": 6
+  },
+  {
+    "number": 37,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/37_Authorization_Nedir_ve_Authenticationdan_Neden_Ayridir.md",
+    "sha256": "245a4cb75e9ff49223bb886d38f94c3e1dbcccc7ff22441bb287b6bd7c10eb77",
+    "code_blocks": 2
+  },
+  {
+    "number": 38,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/38_Role_Tabanli_Yetkilendirme_Nasil_Kurulur.md",
+    "sha256": "58daf180d72cfcb19354b0cb60f65c7f1d0dace83f6b3de09b37633fd8138132",
+    "code_blocks": 7
+  },
+  {
+    "number": 39,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/39_Admin_Olmak_Her_Kaynaga_Erisim_Demek_midir.md",
+    "sha256": "4126cc777f79bb3aec70c6b1bfceee90d1542349e16607ceb2e905f9d81afb62",
+    "code_blocks": 1
+  },
+  {
+    "number": 40,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/40_Ownership_Nedir_Kullanici_Yalnizca_Kendi_Verisini_Nasil_Degistirir.md",
+    "sha256": "e823c1f563ff2c1b85b9c7a0c7a61ea0cdf4b36d347505cf7bba5cff4a5d55e0",
+    "code_blocks": 3
+  },
+  {
+    "number": 41,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/41_403_Forbidden_ile_404_Not_Found_Arasinda_Guvenlik_Acisindan_Nasil_Karar_Verilir.md",
+    "sha256": "e394a463e445bca6daabe495d24a3dd7781b0c8ee802f679a8e574c6e8088ab3",
+    "code_blocks": 5
+  },
+  {
+    "number": 42,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/42_Movie_Kaynaklarina_Owner_Alani_Nasil_Eklenir.md",
+    "sha256": "4e3d10b359bc3bf882c7fadc4b9f2c7f42041502efdcbb13179cf3644557e82c",
+    "code_blocks": 8
+  },
+  {
+    "number": 43,
+    "manuscript": "Node.js-Backend-Book-2-main/05_Authentication_Authorization/43_User_Scope_ile_Listeleme_Sorgulari_Nasil_Sinirlandirilir.md",
+    "sha256": "94277bef4ebd8a7e2e5c28a48e2d7de456b42954f5c9118933274808d7ae45ec",
+    "code_blocks": 9
+  },
+  {
+    "number": 44,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/44_Hesap_Acildi_Ama_Eposta_Adresi_Gercek_mi.md",
+    "sha256": "33d5d98b611922eb1d3356523d553b024746ce8150b139185b87ccb3b84efba0",
+    "code_blocks": 5
+  },
+  {
+    "number": 45,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/45_Eposta_Dogrulama_Tokeni_Nasil_Tasarlanir.md",
+    "sha256": "96088fd0a3d20ffbc5cc2199526d4edadf24fe6fdb4a9a912808457e0ddea3b9",
+    "code_blocks": 5
+  },
+  {
+    "number": 46,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/46_Dogrulama_Linki_Neden_Sureli_ve_Tek_Kullanimlik_Olmalidir.md",
+    "sha256": "2f6a4b68454b3c2fb594f2eaaaa95027affad6de517b3301f6fb51104d6121ab",
+    "code_blocks": 7
+  },
+  {
+    "number": 47,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/47_Parolami_Unuttum_Akisi_Backendde_Nasil_Baslar.md",
+    "sha256": "54a8a332bcb5fe296f1f19caf0bafd584c405df262d8ba7b5f2099caf6d94a4c",
+    "code_blocks": 7
+  },
+  {
+    "number": 48,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/48_Password_Reset_Tokeni_Nasil_Guvenli_Saklanir.md",
+    "sha256": "233b26235e7bcbd94be973aada25acf257065b4ade92c3b8b6cc09f4d42c218d",
+    "code_blocks": 5
+  },
+  {
+    "number": 49,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/49_Yeni_Parola_Belirlenince_Eski_Oturumlara_Ne_Olmali.md",
+    "sha256": "d5bcec9d77ab246f4c9443a60815666a59f85e659d098fd0a951ae9e6cc193e8",
+    "code_blocks": 5
+  },
+  {
+    "number": 50,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/50_Eposta_Gonderme_Isini_Controllerdan_Nasil_Ayiririz.md",
+    "sha256": "bb8ec7418da204dd8f6a7a1ae45f09efa8e39a96f9ccc0fed5f4e22973fafe02",
+    "code_blocks": 24
+  },
+  {
+    "number": 51,
+    "manuscript": "Node.js-Backend-Book-2-main/06_Hesap_Yasam_Dongusu/51_Hesap_Silme_ve_Hesap_Devre_Disi_Birakma_Ayni_Sey_midir.md",
+    "sha256": "cf3b66e14843a1433673ea470cb01c2fd675f02a283b55d149b107d2ac8ab5dc",
+    "code_blocks": 10
+  },
+  {
+    "number": 52,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/52_Kullanici_Profili_Icin_PATCH_Users_Me_Nasil_Tasarlanir.md",
+    "sha256": "60893406ff1ef43cc31cc92b6dbf19689c16e87134a8f093166846fbe830409f",
+    "code_blocks": 23
+  },
+  {
+    "number": 53,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/53_Kullaniciya_Ait_Watchlist_Verisi_Nasil_Modellenir.md",
+    "sha256": "18223ca3391363bb6d3531c8185a5dfecaf2937d0027376cdc6c2d60fc5f7d83",
+    "code_blocks": 11
+  },
+  {
+    "number": 54,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/54_Ayni_Film_Watchliste_Iki_Kez_Eklenirse_Ne_Olmali.md",
+    "sha256": "60fb7fe850f1d7c012af00a2e00ab930fa22178f304b4a505f9a0a702a1eeda8",
+    "code_blocks": 12
+  },
+  {
+    "number": 55,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/55_Review_ve_Rating_Verisi_Embedded_mi_Referenced_mi_Tutulmali.md",
+    "sha256": "b9a9267fbcce5d2fcd5e8ae2c6075022b5c7fc1cbcdd4a6316e3942312309e0b",
+    "code_blocks": 10
+  },
+  {
+    "number": 56,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/56_Multipart_Form_Data_Nedir_ve_JSONdan_Neden_Farklidir.md",
+    "sha256": "751a62e18273fd6a08d6478886f1767a7d0ef7cb76e99bc5d73ed7886ca5c664",
+    "code_blocks": 8
+  },
+  {
+    "number": 57,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/57_Multer_ile_Dosya_Upload_Akisi_Nasil_Kurulur.md",
+    "sha256": "4814a004be1b53950fa7a620901943488751b580bd2119de8195123473d01e1a",
+    "code_blocks": 13
+  },
+  {
+    "number": 58,
+    "manuscript": "Node.js-Backend-Book-2-main/07_Kullanici_Kaynaklari_Upload/58_Dosyayi_Diskte_mi_Bulutta_mi_Saklamaliyiz.md",
+    "sha256": "556a97da89f0d4e7e1a5fa2266fa834b8ba50b611fcf34b603a08fd69b7a6aa6",
+    "code_blocks": 28
+  },
+  {
+    "number": 59,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/59_Authentication_Kodunu_Manuel_Test_Etmek_Neden_Yetmez.md",
+    "sha256": "b90ba00d92b6c6e84934abe23182ca247dd690d00ab074d3b0c0b80230eabaf8",
+    "code_blocks": 8
+  },
+  {
+    "number": 60,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/60_Node_Test_Runner_ile_Ilk_Otomatik_Testimizi_Nasil_Yazariz.md",
+    "sha256": "d2f6115cc563b2c6bc2d75108da6e6605bf1b7259247ffa8e51eb40b8dc6c36f",
+    "code_blocks": 12
+  },
+  {
+    "number": 61,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/61_Supertest_ile_Express_Endpointlerini_Nasil_Test_Ederiz.md",
+    "sha256": "f68c88f4763d0017a0bb69cea567ec4ee94fbc851a5a2abeb8cfc132d6733f17",
+    "code_blocks": 12
+  },
+  {
+    "number": 62,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/62_Register_Login_Logout_Akisini_Bastan_Sona_Nasil_Test_Ederiz.md",
+    "sha256": "c39192b35bf603f0f8c2a9bac4e331073c5303161e035fceae10b1bf12f2aa43",
+    "code_blocks": 9
+  },
+  {
+    "number": 63,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/63_Protected_Route_ve_Authorization_Testleri_Nasil_Yazilir.md",
+    "sha256": "92b84244441f206510c5ebb8247224e29592a8f77c23b37e3a1e4c365cdb28bd",
+    "code_blocks": 11
+  },
+  {
+    "number": 64,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/64_Test_Veritabani_Neden_Production_Veritabanindan_Ayri_Olmalidir.md",
+    "sha256": "30382463a4e66f3d0c5cad72d93fa8669d0b0a24b88dd059ecd0b578faa2a93e",
+    "code_blocks": 7
+  },
+  {
+    "number": 65,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/65_CSRF_Nedir_ve_Cookie_Tabanli_Authenticationi_Neden_Ilgilendirir.md",
+    "sha256": "038707a9ca5ce4f811db4d9d76562e7bb7af78fa5c53841aaa46e1bb330b4c66",
+    "code_blocks": 8
+  },
+  {
+    "number": 66,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/66_Race_Condition_Nedir_Unique_Index_Tek_Basina_Hangi_Problemi_Cozer.md",
+    "sha256": "b32541b79e140968081c5ba68597bc1dd8d5593de76a0370e9a99ad2caf87662",
+    "code_blocks": 8
+  },
+  {
+    "number": 67,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/67_MongoDB_Transaction_Ne_Zaman_Gercekte_Gereklidir.md",
+    "sha256": "fc4cf16714b4f01c54228d9bd1134a77b45e104753f5318a2af067f5cbe61afa",
+    "code_blocks": 3
+  },
+  {
+    "number": 68,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/68_Audit_Log_ile_Guvenlik_Acisindan_Onemli_Islemleri_Nasil_Izleriz.md",
+    "sha256": "aa5c6573de48ca48da4f3ab7719b126ccd477187d91fc5a671bd8edb976c552d",
+    "code_blocks": 6
+  },
+  {
+    "number": 69,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/69_Authentication_Sistemini_Productiona_Almadan_Once_Neleri_Kontrol_Etmeliyiz.md",
+    "sha256": "33dc02b0ce181b6d9d3789385c746cfe19718b2931c58b0027e07ea95e768716",
+    "code_blocks": 15
+  },
+  {
+    "number": 70,
+    "manuscript": "Node.js-Backend-Book-2-main/08_Test_Guvenlik_Production/70_Final_Proje_Movie_APIyi_Kullanicili_ve_Guvenli_Bir_Backend_Sistemine_Nasil_Donustururuz.md",
+    "sha256": "7ac1f447d04c4ccc0e5ac163add0ca23ce2809b0bc48cc372a4134726572ba66",
+    "code_blocks": 21
+  }
+]

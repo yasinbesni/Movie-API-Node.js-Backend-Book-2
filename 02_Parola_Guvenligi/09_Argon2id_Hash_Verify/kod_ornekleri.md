@@ -1,20 +1,48 @@
-# Bölümün kaynak metnindeki kod ve istek örnekleri
+# Bölüm 9 — Kitaptaki örnekler
 
-Bu dosya, ilgili bölümdeki örnekleri **orijinal sıralarıyla** gösterir. Bazı bloklar tek başına çalıştırılacak dosya değil, mevcut dosyaya eklenecek parçalardır. Bunları `code/` klasöründeki tam örneklerle karıştırmayın.
+Örnekler kitaptaki sırayla verilmiştir. Açıklama ve tasarım karşılaştırmalarını kalıcı uygulama dosyalarıyla karıştırmayın.
 
-### Örnek 1 — bash
+## Örnek 1
+
+# Argon2id ile Parola Nasıl Saklanır ve Doğrulanır?
+
+## Eksik Parça Artık Belli
+
+Ada'nın adını ve e-posta adresini kaydedebileceğimiz bir `User` modelimiz var. Kayıt isteğinde hangi alanları kabul edeceğimizi de Joi ile belirledik. Ancak `User` modelindeki `passwordHash` alanı hâlâ boş: Ona yazacağımız güvenli değeri üreten kodu henüz yazmadık.
+
+Önce parolayı güvenli biçimde saklamamızı sağlayacak yardımcı fonksiyonları yazalım. Bunları 10. bölümde `POST /auth/register` isteğine bağlayınca Ada’nın hesabı güvenli bir parola hash’iyle oluşturulacak.
+
+---
+
+## Argon2 Paketini Ekleyelim
+
+5. ve 6. bölümlerde kullanıcı modelini ve kayıt doğrulamasını eklediğimiz **aynı Movie API çalışma kopyasında** devam ediyoruz. `package.json` dosyasının bulunduğu klasörde terminal açalım. Parolayı güvenli biçimde işlemek için yeni bir pakete ihtiyacımız var:
 
 ```bash
 npm install argon2
 ```
 
-### Örnek 2 — text
+## Örnek 2
+
+Bu komut `argon2` paketini, üzerinde çalıştığımız Movie API'nin bağımlılıklarına ekler.
+
+Kurulumda hata alırsanız kitabın sonundaki **[Sorun Giderme Rehberi — SG-05](../09_Ekler/01_Sorun_Giderme_Rehberi.md#sg-05)** başlığına bakabilirsiniz.
+
+---
+
+## Parolayla Çalışan Kodun Tek Bir Yeri Olsun
+
+Kayıt sırasında paroladan **Argon2id hash değeri** üreteceğiz. Giriş sırasında ise gönderilen parolayı saklanan bu değere karşı doğrulayacağız. Ada parolasını daha sonra değiştirse de aynı iki işlemi kullanacağız.
+
+Bu iki düşük seviyeli işi `Controller` veya `User` modelinin içine dağıtmak yerine tek dosyada toplayalım:
 
 ```text
 src/utils/password.js
 ```
 
-### Örnek 3 — js
+## Örnek 3
+
+Şimdi dosyanın tamamını yazabiliriz:
 
 ```js
 import argon2 from "argon2";
@@ -35,7 +63,27 @@ export const verifyPassword = async (passwordHash, password) => {
 };
 ```
 
-### Örnek 4 — js
+## Örnek 4
+
+z yere yavaşlatmak değil; **parola tahminini saldırgan için pahalı, gerçek kullanıcı için kabul edilebilir** hâle getirmektir.
+
+`HASH_OPTIONS` yalnızca **yeni bir hash üretirken** `argon2.hash()` fonksiyonuna veriliyor. Üretilen hash metni algoritmayı, kullanılan parametreleri ve salt'ı da içerdiği için `argon2.verify()` doğrulama sırasında bunları saklanan hash'ten okuyabilir. Dolayısıyla `verifyPassword()` içinde seçenekleri ikinci kez yazmıyoruz.
+
+---
+
+## İki Fonksiyon, İki Farklı İş
+
+`hashPassword(password)` ham paroladan saklanacak değeri üretir. Ada kayıt olurken kullanacağız.
+
+`verifyPassword(passwordHash, password)` ise Ada’nın girişte gönderdiği parolanın kayıtlı hash ile uyuşup uyuşmadığını `true` veya `false` olarak bildirir. 11. bölümde giriş kararını bu fonksiyonla oluşturacak, 13. bölümde de çalışan `POST /auth/login` yoluna bağlayacağız. Önce küçük bir denemeyle iki fonksiyonun davranışını görelim.
+
+Parametre sırası önemlidir: `argon2.verify()` önce **saklanan hash'i**, sonra **gönderilen parolayı** alır.
+
+---
+
+## Aynı Parolayı İki Kez Hash'leyelim
+
+Henüz `User.create()` çağırmadan işlemi deneyebiliriz. `src/scripts/tryPasswords.js` adında geçici bir dosya oluşturun:
 
 ```js
 import {
@@ -56,13 +104,17 @@ console.log(
 );
 ```
 
-### Örnek 5 — bash
+## Örnek 5
+
+Çalıştırın:
 
 ```bash
 node src/scripts/tryPasswords.js
 ```
 
-### Örnek 6 — text
+## Örnek 6
+
+Beklenen sonuç:
 
 ```text
 Hash'ler eşit mi? false

@@ -24,9 +24,6 @@ router.post(
   "/login",
   validateBody(loginUserSchema),
   loginUser,
-  logoutUser,
-  loginUserWithToken,
-  refreshSession,
 );
 
 router.post("/logout", logoutUser);

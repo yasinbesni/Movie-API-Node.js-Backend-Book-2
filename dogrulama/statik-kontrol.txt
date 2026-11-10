@@ -1,0 +1,3 @@
+70 bölüm, 294 JavaScript, 71 example.env
+PASS: bölüm/dosya, sözdizimi, tam proje importları ve env kapsamı.
+Bu statik kontrol HTTP ve MongoDB testlerinin yerine geçmez. Tam projede npm test çalıştırın.

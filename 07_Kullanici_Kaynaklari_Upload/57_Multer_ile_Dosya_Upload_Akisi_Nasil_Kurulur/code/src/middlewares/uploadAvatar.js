@@ -10,15 +10,15 @@ const fileFilter = (req, file, callback) => {
   ];
 
   if (!allowedTypes.includes(file.mimetype)) {
-    return callback(
-      new Error("Desteklenmeyen dosya türü."),
-    );
+    const error = new Error("Desteklenmeyen dosya türü.");
+    error.status = 415;
+    return callback(error);
   }
 
   callback(null, true);
 };
 
-export const uploadAvatar = multer({
+const acceptAvatar = multer({
   storage,
   fileFilter,
   limits: {
@@ -26,3 +26,13 @@ export const uploadAvatar = multer({
     files: 1,
   },
 }).single("avatar");
+
+export const uploadAvatar = (req, res, next) => {
+  acceptAvatar(req, res, (error) => {
+    if (!error) return next();
+    if (error instanceof multer.MulterError) {
+      error.status = error.code === "LIMIT_FILE_SIZE" ? 413 : 400;
+    }
+    return next(error);
+  });
+};

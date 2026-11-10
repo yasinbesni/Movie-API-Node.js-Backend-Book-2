@@ -4,13 +4,16 @@ export const errorHandler = (
   res,
   next,
 ) => {
-  req.log.error(
+  req.log?.error(
     {
       err: error,
     },
     "Request işlenirken beklenmeyen hata oluştu.",
   );
 
+  if (res.headersSent) return next(error);
+  if (error.name === "CastError") return res.status(400).json({ message: "Geçersiz kimlik veya alan değeri." });
+  if (error.type === "entity.parse.failed") return res.status(400).json({ message: "Geçersiz JSON." });
   if (error.code === 11000) {
     return res.status(409).json({
       message: "Bu kayıt zaten mevcut.",

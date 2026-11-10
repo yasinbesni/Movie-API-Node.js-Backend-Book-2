@@ -19,6 +19,7 @@ import moviesRouter from "./routers/movies.js";
 import authRouter from "./routers/auth.js";
 
 export const app = express();
+app.set("trust proxy", env.trustProxy);
 
 app.use(requestLogger);
 app.use(helmet());
@@ -26,6 +27,7 @@ app.use(helmet());
 app.use(
   cors({
     origin: env.corsOrigin,
+    credentials: true,
   }),
 );
 
@@ -48,8 +50,6 @@ app.get("/", (req, res) => {
   res.send("Merhaba Express!");
 });
 
-app.use("/movies", moviesRouter);
-
 // Bölüm 19–20: Oturum kaydı MongoDB'de tutulur.
 const isProduction = env.nodeEnv === "production";
 app.use(session({
@@ -66,6 +66,9 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 8,
   },
 }));
+
+
+app.use("/movies", moviesRouter);
 
 app.use("/auth", authRouter);
 

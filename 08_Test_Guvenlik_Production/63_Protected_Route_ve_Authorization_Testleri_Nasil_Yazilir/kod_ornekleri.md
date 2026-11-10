@@ -1,21 +1,35 @@
-# Bölümdeki kod ve istek örnekleri
+# Bölüm 63 — Kitaptaki örnekler
 
-Bu örnekleri bölümdeki sırayla, **kendi Movie API çalışma kopyanıza** uygulayın. Bazı parçalar var olan bir dosyanın içine eklenir; tek başlarına çalıştırılmaz.
+Örnekler kitaptaki sırayla verilmiştir. Açıklama ve tasarım karşılaştırmalarını kalıcı uygulama dosyalarıyla karıştırmayın.
 
-### Örnek 1 — text
+## Örnek 1
+
+# Korumalı Yolları ve Yetki Kontrollerini Nasıl Test Ederiz?
+
+
+## Giriş Başarılıysa Her İstek de Başarılı Olmalı mı?
+
+Ada, kendi film kaydını düzenlemek için Movie API'ye giriş yaptı. Aynı kimlikle Deniz'in kaydını değiştirmeye kalkarsa ne olur? Sunucu isteği reddetmeli **ve Deniz'in verisini olduğu gibi bırakmalıdır.** Bu bölümde yalnız başarılı istekleri değil, sistemin durdurması gereken işlemleri de test edeceğiz. Her örnekte iki sonucu yan yana göreceğiz: *API ne döndü ve veritabanındaki kayıt gerçekten korundu mu?*
+
+## Giriş Başarılı Olsa da İstek Neden Reddedilir?
+
+Ada, `GET /users/me` ile kendi profilini okuyabilir. Fakat aynı çerezle yalnız yöneticilere açık `GET /admin/access-check` yolunu çağırdığında `403 Forbidden` almalıdır. Çünkü **giriş yapmış olmak, her işlem için izin sahibi olmak değildir.**
+
+Üç farklı yanıtı karıştırmayalım:
 
 ```text
-credential yok
-→ 401
-
-credential var ama role yetersiz
-→ 403
-
-private resource başka owner'a ait
-→ 404
+401 Unauthorized → Kimlik doğrulanamadı; giriş gerekli.
+403 Forbidden    → Kimlik biliniyor, fakat bu işleme izin yok.
+404 Not Found    → Kaydı göstermiyoruz; bazen başka kişiye ait kaydı gizlemek için de seçilir.
 ```
 
-### Örnek 2 — js
+## Örnek 2
+
+Son durum, Movie API'nin başkasına ait film kayıtlarını gizleme tercihine bağlıdır; her yetkisiz işlem otomatik olarak `404` dönmez. Kodlarda `401`, `403` veya `404` görmek ilk adımdır. Değiştirme isteği reddedildiyse **ilgili belgenin gerçekten değişmediğini de** sınamalıyız.
+
+## Çerez Olmadan Korumalı Yola Erişilebilir mi?
+
+Örnekleri `test/authorization.test.js` dosyasında toplayabiliriz. Kod parçalarında göreceğiniz `loginAsUser`, `userAAgent` ve `movieA`, test kurulumu sırasında hazırlanan yardımcılar ve kayıtlar için kullandığımız isimlerdir. **Bu yardımcıları ve test verilerini oluşturmadan parçaları tek başına çalıştıramayız.**
 
 ```js
 it("auth olmadan /users/me 401 döner", async () => {
@@ -26,7 +40,17 @@ it("auth olmadan /users/me 401 döner", async () => {
 });
 ```
 
-### Örnek 3 — js
+## Örnek 3
+
+Bu test, korumalı yolun **giriş yapılmadan kullanılamadığını** doğrular. “Kapıda kimlik kontrolü var mı?” sorusunun ilk cevabıdır.
+
+---
+
+## Normal Kullanıcı Yönetici Yoluna Girebilir mi?
+
+38. bölümde yalnızca yetki kararını görmek için oluşturduğumuz `GET /admin/access-check` yolunu kullanalım. O deneme yolunu daha önce kaldırdıysanız, bu testi ayrı test ortamında yeniden açın. Gerçekte bulunmayan `/admin/movies/...` yolunu çağırmak, rol kontrolünün çalışıp çalışmadığını göstermeyecektir.
+
+Önce normal kullanıcıyla giriş yaptıran bir test yardımcısı kullanalım:
 
 ```js
 const agent = await loginAsUser({
@@ -34,7 +58,9 @@ const agent = await loginAsUser({
 });
 ```
 
-### Örnek 4 — js
+## Örnek 4
+
+Sonra:
 
 ```js
 const response = await agent
@@ -43,24 +69,15 @@ const response = await agent
 assert.equal(response.status, 403);
 ```
 
-### Örnek 5 — text
+## Örnek 5
 
-```text
-User A
-→ Movie A oluşturdu
+Aynı yolu yönetici rolündeki Deniz'le deneyip erişime izin verildiğini de doğrulayalım. Yalnız Ada'nın reddedilmesi, yolun yanlışlıkla **herkese kapatılmadığını** göstermez; iki sonucu birlikte görmek gerekir.
 
-User B
-→ login oldu
-→ Movie A'yı PATCH etmeye çalıştı
-```
+---
 
-### Örnek 6 — http
+## Sahiplik Kontrolünü İki Kullanıcıyla Sınamak
 
-```http
-404 Not Found
-```
-
-### Örnek 7 — js
+Ada'nın oluşturduğu `Movie` kaydının başlığı **Interstellar** olsun. Deniz kendi hesabıyla giriş yapıp Ada'nın film kimliğine (`movieA._id`) bir `PATCH` isteği göndermeyi denesin:
 
 ```js
 const response = await userBAgent
@@ -72,7 +89,13 @@ const response = await userBAgent
 assert.equal(response.status, 404);
 ```
 
-### Örnek 8 — js
+## Örnek 6
+
+Burada `userBAgent`, Deniz'in girişini koruyan Supertest istemcisidir; `movieA` ise test başlamadan önce Ada için oluşturduğumuz örnek kayıttır. Beklediğimiz `404`, başka kullanıcıya ait kaydı gizleyen **bu API tasarımının** sonucudur. Ardından test veritabanında aynı filmi yeniden okuyalım: başlık hâlâ **Interstellar** olmalıdır. Böylece yalnızca hata mesajını değil, **yetkisiz değişikliğin gerçekleşmediğini** de kanıtlamış oluruz.
+
+## Ada Kendi Film Kaydını Güncelleyebilmeli
+
+Yalnız reddedilmesi gereken isteği test etmek yetmez: Ada kendi kaydını düzenleyebiliyor mu, onu da görelim.
 
 ```js
 const response = await userAAgent
@@ -88,37 +111,65 @@ assert.equal(
 );
 ```
 
-### Örnek 9 — http
+## Örnek 7
+
+Ada’nın kendi kaydını değiştirebilmesi ve Deniz’in Ada’nın kaydını değiştirememesi birlikte sınandığında **yetki sınırının** doğru kurulduğunu gösteririz.
+
+---
+
+## Kişisel Film Listesinde Başka Kullanıcının Kaydı Görünür mü?
+
+Ada'ya iki, Deniz'e bir film kaydı oluşturalım. Ada aşağıdaki korumalı yolu çağırdığında yalnız kendi iki kaydını görmeli:
 
 ```http
 GET /users/me/movies
 ```
 
-### Örnek 10 — text
+## Örnek 8
 
-```text
-owner = User A
-```
+Burada neden `GET /movies` kullanmıyoruz? Çünkü bu yol **herkese açık film kataloğu** için; `GET /users/me/movies` ise giriş yapan kişinin eklediği kayıtları `owner` bilgisine göre sınırlar.
 
-### Örnek 11 — js
+Sonuçtaki iki belgenin de `owner` değeri Ada'yı göstermeli. Sayfalama yanıtındaki `total` değeri de **2** olmalı. Deniz'in filmi listeden gizlenip `total: 3` dönerse özel kaydın varlığına ilişkin bilgi hâlâ açığa çıkabilir. Yani sınırı hem liste sorgusuna hem toplam sayımına uygulamalıyız.
+
+## Hesabı Kapatılan Kullanıcının Çerezi Çalışır mı?
+
+Ada giriş yaptıktan sonra test veritabanında hesabın etkinlik alanını değiştirelim:
 
 ```js
 isActive = false
 ```
 
-### Örnek 12 — http
+## Örnek 9
+
+yapalım.
+
+Eski access cookie ile protected route çağrıldığında:
 
 ```http
 401
 ```
 
-### Örnek 13 — js
+## Örnek 10
+
+bekleriz.
+
+Ada'nın eski çerezi tarayıcıda duruyor olabilir. Buna rağmen korumalı istek `401` alıyorsa `authenticate` ara katmanının yalnız JWT imzasını değil, **kullanıcı hesabının güncel durumunu** da kontrol ettiğini görürüz.
+
+---
+
+## Parola Değişince Eski JWT Reddediliyor mu?
+
+Ada giriş yaptığında sunucu ona, o andaki `authVersion` sayısını taşıyan bir erişim JWT'si verir. Örneğin hem kullanıcı kaydında hem JWT'de sayı `0` olsun. **Önce bu JWT ile korumalı isteğin başarılı olduğunu doğrulayın.**
+
+Şimdi test veritabanında kullanıcıya ait sayıyı bir artırın:
 
 ```js
 $inc: { authVersion: 1 }
 ```
 
-### Örnek 14 — http
+## Örnek 11
+
+JWT'nin içindeki sayı `0` olarak kaldı; kullanıcı kaydındaki değer artık `1`. **Aynı erişim JWT'sini taşıyan çerezle** korumalı isteği yeniden gönderdiğinizde beklediğimiz yanıt:
 
 ```http
 401

@@ -1,0 +1,18 @@
+import { Router } from "express";
+import * as controllers from "../controllers/auth.js";
+import * as schemas from "../validation/auth.js";
+import { authenticate } from "../middlewares/authenticate.js";
+import { validateBody } from "../middlewares/validateBody.js";
+import { rateLimit } from "express-rate-limit";
+const router = Router();
+router.use(rateLimit({ windowMs: 15 * 60 * 1000, limit: 100, standardHeaders: "draft-8", legacyHeaders: false }));
+router.post("/register", validateBody(schemas.registerUserSchema), controllers.registerUser);
+router.post("/login", validateBody(schemas.loginUserSchema), controllers.loginUser);
+router.post("/jwt/login", validateBody(schemas.loginUserSchema), controllers.loginUserWithToken);
+router.post("/refresh", controllers.refreshSession);
+router.post("/logout", controllers.logoutAll);
+router.post("/verify-email", validateBody(schemas.verifyEmailSchema), controllers.verifyEmailController);
+router.post("/forgot-password", validateBody(schemas.forgotPasswordSchema), controllers.forgotPasswordController);
+router.post("/reset-password", validateBody(schemas.resetPasswordSchema), controllers.resetPasswordController);
+router.post("/send-verification-email", authenticate, controllers.sendVerificationController);
+export default router;

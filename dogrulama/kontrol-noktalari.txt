@@ -1,0 +1,5 @@
+PASS /workspace/scratch/828ef3d4a213/work/Movie-API-Node.js-Backend-Book-1-main/08_Test_Documentation_Deployment/70_Final_Proje_Movie_API_yi_Bastan_Sona_Nasil_Tamamlariz/code/movie-api
+PASS /workspace/scratch/828ef3d4a213/work/Movie-API-Node.js-Backend-Book-2-main/00_Kontrol_Noktalari/13_Register_Login/movie-api
+PASS /workspace/scratch/828ef3d4a213/work/Movie-API-Node.js-Backend-Book-2-main/00_Kontrol_Noktalari/22_Session_Guvenligi/movie-api
+PASS /workspace/scratch/828ef3d4a213/work/Movie-API-Node.js-Backend-Book-2-main/00_Kontrol_Noktalari/35_Session_ve_JWT/movie-api
+PASS /workspace/scratch/828ef3d4a213/work/Movie-API-Node.js-Backend-Book-2-main/00_Kontrol_Noktalari/43_Sahiplik_ve_Yetki/movie-api

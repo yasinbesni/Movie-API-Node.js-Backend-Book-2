@@ -18,13 +18,9 @@ export const authenticate = async (req, res, next) => {
     return next(unauthorized());
   }
 
-  try {
-    const user = await User.findById(payload.sub);
-    if (!user) return next(unauthorized());
+  const user = await User.findById(payload.sub);
+  if (!user) return next(unauthorized());
 
-    req.user = user;
-    return next();
-  } catch (error) {
-    return next(error);
-  }
+  req.user = user;
+  return next();
 };

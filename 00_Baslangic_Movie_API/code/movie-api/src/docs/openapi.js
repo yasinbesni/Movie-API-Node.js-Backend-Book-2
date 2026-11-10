@@ -206,7 +206,7 @@ export const openApiDocument = {
         properties: {
           title: {
             type: "string",
-            pattern: "\S",
+            pattern: "\\S",
             example: "Dune",
           },
           releaseYear: {
@@ -229,7 +229,7 @@ export const openApiDocument = {
         properties: {
           title: {
             type: "string",
-            pattern: "\S",
+            pattern: "\\S",
           },
           releaseYear: {
             type: "integer",

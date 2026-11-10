@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { authenticate } from "../middlewares/authenticate.js";
+import { requireVerifiedEmail } from "../middlewares/requireVerifiedEmail.js";
+import { validateBody } from "../middlewares/validateBody.js";
+import { createReviewSchema } from "../validation/reviews.js";
+import { postReview, ratingStats, validateMovieId } from "../controllers/reviews.js";
+const router = Router({ mergeParams: true });
+router.use(validateMovieId);
+router.get("/stats", ratingStats);
+router.post("/", authenticate, requireVerifiedEmail, validateBody(createReviewSchema), postReview);
+export default router;

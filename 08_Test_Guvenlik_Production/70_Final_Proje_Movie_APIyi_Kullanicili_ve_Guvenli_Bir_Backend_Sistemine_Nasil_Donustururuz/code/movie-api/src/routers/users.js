@@ -1,0 +1,17 @@
+import { Router } from "express";
+import { authenticate } from "../middlewares/authenticate.js";
+import { validateBody } from "../middlewares/validateBody.js";
+import { uploadAvatar } from "../middlewares/uploadAvatar.js";
+import * as controllers from "../controllers/users.js";
+import { getMyMovies } from "../controllers/movies.js";
+import { updateProfileSchema, requestEmailChangeSchema, confirmEmailChangeSchema } from "../validation/users.js";
+const router = Router();
+router.use(authenticate);
+router.get("/me", controllers.getCurrentUser);
+router.get("/me/movies", getMyMovies);
+router.patch("/me", validateBody(updateProfileSchema), controllers.updateCurrentUser);
+router.delete("/me", controllers.disableCurrentUser);
+router.post("/me/avatar", uploadAvatar, controllers.updateAvatar);
+router.post("/me/email-change", validateBody(requestEmailChangeSchema), controllers.requestEmailChangeController);
+router.post("/me/email-change/confirm", validateBody(confirmEmailChangeSchema), controllers.confirmEmailChangeController);
+export default router;

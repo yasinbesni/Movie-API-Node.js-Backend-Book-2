@@ -81,6 +81,7 @@ const parseLogLevel = (value) => {
 };
 
 export const env = {
+  trustProxy: process.env.TRUST_PROXY === "1" ? 1 : false,
   jwtAccessSecret: getRequiredString("JWT_ACCESS_SECRET"),
   nodeEnv: process.env.NODE_ENV ?? "development",
   sessionSecret: getRequiredString("SESSION_SECRET"),

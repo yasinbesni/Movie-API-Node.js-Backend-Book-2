@@ -1,0 +1,35 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> movie-api@1.0.0 test
+> node --test --test-concurrency=1 test/*.test.js
+
+✔ Sağlık ve dokümantasyon yolları (1149.09497ms)
+✔ CSRF eksik, bozuk ve yanlış kaynağa sahip istekleri reddeder (19.029516ms)
+✔ Hatalı kayıt 400; kayıt 201; parola hash'i yanıt içinde bulunmaz (202.992787ms)
+✔ Var olmayan hesap ve yanlış parola aynı 401 yanıtını verir (59.471168ms)
+✔ JWT giriş, anonim 401 ve yönetici olmayan hesaba 403 (139.701555ms)
+✔ Doğrulanmamış kullanıcı film oluşturamaz; doğrulama tokenı tek kullanımlıktır (35.040187ms)
+✔ Film oluşturma, sahiplik, herkese açık katalog ve kişisel liste (60.529472ms)
+✔ Eşzamanlı izleme listesi isteği tek kayıt üretir; kişisel liste sızmaz (55.382474ms)
+✔ Review doğrulaması, tekil indeks ve puan ortalaması (32.846707ms)
+✔ Profil güncellemesi yalnız izinli alanları kabul eder (16.81725ms)
+✔ Avatar gerçek görsel doğrulaması, boyut ve tür sınırları (94.359164ms)
+✔ Destek: doğrulanmamış hesap, hatalı mesaj ve istemcinin alıcı değiştirmesi reddedilir (16.69041ms)
+✔ Destek: dosyasız mesaj ve taranmış ek SMTP test sunucusuna gönderilir (63.67492ms)
+✔ Destek: zararlı ek, yanlış dosya türü, SMTP hatası ve rate limit (31.157111ms)
+✔ Dosya tarama hizmeti kapalıysa ek gönderimi durur (9.365973ms)
+✔ E-posta değişikliği parola ister, yeni adresi doğrular ve eski yetkileri iptal eder (200.436924ms)
+✔ Süresi dolan e-posta ve reset belirteçleri reddedilir (39.815359ms)
+✔ Refresh rotation ve eski tokenın yeniden kullanımında bütün aile iptali (64.188324ms)
+✔ Parola yenileme genel yanıt, tek kullanımlı reset ve eski JWT reddi (153.272974ms)
+✔ Session giriş yolu çalışır; hesap kapatma session/JWT/refresh haklarını iptal eder (125.410216ms)
+✔ Logout refresh kaydını iptal eder ve çerezleri temizler (13.567519ms)
+✔ Audit gerçek kayıt içerir; ham parola ve token saklamaz (2.657345ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4386.151621

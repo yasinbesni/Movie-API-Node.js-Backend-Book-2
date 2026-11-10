@@ -1,21 +1,43 @@
-# Backend Book 2 — Movie API Kodları
+# Node.js ile Backend Geliştirme: Kullanıcı Yönetimi ve Güvenli API'ler
 
-**Bu kitabın kod deposu:** [Backend Book 2 – Movie API](https://github.com/yasinbesni/Backend-Book-2-Movie-API)
+## 2. Kitap — Movie API kodları
 
-İkinci kitabın kodlarını **tek bir Movie API'yi geliştirerek** takip ediyoruz. Başlangıç sürümü, *Node.js ile Backend: Sıfırdan Gerçek Bir API Geliştirme Rehberi* kitabının 70. bölümündeki final projedir.
+Resmî depo: https://github.com/yasinbesni/Movie-API-Node.js-Backend-Book-2
 
-**Birinci kitabın 70 bölüm klasörü bu depoya taşınmadı.** Yalnızca kitabın sonunda ortaya çıkan Movie API'nin bir kopyası `00_Baslangic_Movie_API/code/movie-api/` klasöründe bulunuyor. İkinci kitabın 1–70. bölüm klasörleri, bu uygulamada adım adım yaptığımız değişiklikleri gösteriyor.
+Bu paket kitapla birlikte kullanılır. 01–70 numaralı bölüm klasörleri öğrenme sırasını korur. Çoğu `code/` klasörü yalnız ilgili bölümde değişen dosyaları içerir; bunlar ayrı uygulamalar değildir. Kodları tek bir çalışma kopyasında birleştirin. `kod_ornekleri.md` içindeki tasarım karşılaştırmaları, HTTP örnekleri ve fonksiyon parçaları da bağımsız çalıştırılacak dosyalar değildir.
 
-## Nereden başlayacağım?
+## Tam projeyi çalıştırma
 
-`00_Baslangic_Movie_API/code/movie-api/` klasörünü bilgisayarınızda bir **çalışma kopyası** olarak açın. Terminali `package.json` dosyasının yanında çalıştırıp başlangıç paketlerini `npm install` ile kurun. `.env.example` dosyasındaki ayarlarla ayrı bir deneme veritabanına bağlanın.
+70. bölümün `code/movie-api/` klasörü birleştirilmiş final uygulamasıdır. Terminali burada açın. Node.js 22.12 veya üzeri gerekir; doğrulama Node.js 24 ile yapıldı.
 
-Bölümleri sırasıyla okuyun ve yaptığınız değişiklikleri **hep aynı çalışma kopyasına** uygulayın. Örneğin 5. bölümde `User` modelini, 6. bölümde kayıt doğrulamasını ekleyeceğiz. Bu dosyalar başlangıç projesinde hazır değil.
+```bash
+npm ci --ignore-scripts
+cp example.env .env
+```
 
-## Klasörleri nasıl okuyacağım?
+PowerShell kullanıyorsanız kopyalama komutu `Copy-Item example.env .env` olur. `.env` içindeki MongoDB adresini kendi deneme veritabanınızla değiştirin. Gizli değer içeren ayarlarda her değişken için ayrı bir değer üretin:
 
-Her numaralı klasördeki `README.md` ilgili adıma kısa bir giriş sunar; `kod_ornekleri.md` kitaptaki kod ve HTTP örneklerini sırayla içerir. `code/` klasörü varsa yalnızca o aşamada ele alınan **tam dosya örnekleri** vardır. Bazı değişiklikler mevcut dosyaya eklenecek kod parçalarıdır; bunları tek başlarına yeni uygulama gibi çalıştırmayın.
+```bash
+node -e "console.log(require('node:crypto').randomBytes(48).toString('hex'))"
+npm start
+```
 
-`00_Kontrol_Noktalari/` klasöründe 13, 22, 35 ve 43. bölümlere ait birleştirilmiş karşılaştırma sürümleri bulunur. Bunlar ilerlemenizi kontrol etmek içindir, **tüm 70 bölümün test edilmiş final uygulaması** değildir. Başlangıç kaynağı: https://github.com/yasinbesni/Backend-Book-Movie-API
+`example.env` istenen ana örnek dosyadır. `.env.example` aynı içeriğin önceki kullanım biçimiyle uyumlu kopyasıdır. İkisini birden yüklemeyin; yalnız birini `.env` adıyla kopyalayın. Örnek dosyalar gerçek şifre içermez. Bir bölümde yalnız değişen dosyalar varsa o bölümün `example.env` dosyasını çalışma projenizin `package.json` dosyasının yanında kullanın.
 
-Uygulamanızı ayrı bir test veritabanında çalıştırın ve her bölümde eklediğiniz davranışı deneyin. `node tools/dogrula.mjs` komutu dosya eşleşmelerini ve sözdizimini kontrol eder; HTTP isteklerini veya MongoDB ile bütünleşik çalışmayı tek başına test etmez.
+## Kontrol
+
+Depo kökünde `node tools/dogrula.mjs`, bölüm sayısını, JavaScript sözdizimini, tam projelerin importlarını ve örnek ortam ayarlarını denetler. Final proje klasöründe `npm test`, otomatik olarak ayrı ve geçici MongoDB replica set oluşturur; sizin MongoDB adresinizi kullanmaz. İlk testte MongoDB test ikilisi indirilir; internet erişimi gerekir. Bu test bağımlılıklarını canlı ortama yüklemek için kullanmayın; canlı kurulumda `npm ci --ignore-scripts --omit=dev` kullanılır.
+
+Test kapsamı ve dış hizmet sınırları için `UYUMLULUK_RAPORU.md` dosyasına bakın.
+
+## Başlangıç ve kontrol sürümleri
+
+`00_Baslangic_Movie_API/code/movie-api/`, **Node.js ile Backend Geliştirme: Temelden Gerçek Bir API’ye (1. Kitap)** finaliyle aynı başlangıç kodudur. Kullanıcı özellikleri bu başlangıçta hazır değildir.
+
+`00_Kontrol_Noktalari/` içindeki 13, 22, 35 ve 43 sürümleri yalnız o aşamaya kadar işlenen konuları içerir. Sonraki bölümlerin güvenlik özellikleri için 70. bölüm finalini kullanın. Her tam projenin kendi `package.json`, `package-lock.json` ve `example.env` dosyası vardır.
+
+Final uygulamada önce `GET /auth/csrf` çağrısıyla çerez ve `csrfToken` alın. Veri değiştiren isteklerde aynı istemcinin çerezleriyle birlikte `X-CSRF-Token` başlığı gönderilir. Tarayıcıda `credentials: "include"` kullanın. Oturum girişi `/auth/login`, JWT girişi `/auth/jwt/login` yolundadır.
+
+Finalde parola sıfırlama, e-posta değişikliği, hesap kapatma ve refresh rotation transaction kullanır. MongoDB Atlas veya replica set gerekir. SMTP için yerel bir test posta kutusu kullanılabilir. Destek dosya eki ClamAV taraması olmadan gönderilmez; dosyasız destek isteği tarayıcı hizmetine ihtiyaç duymaz. Cloudinary yalnız `AVATAR_STORAGE=cloudinary` seçildiğinde gerekir. Yerel avatar saklama varsayılandır.
+
+SMTP adresi ve kimlik bilgileri, Cloudinary bilgileri, frontend HTTPS adresi ve varsa reverse proxy sayısı kendi ortamınızla doğrulanmalıdır. `TRUST_PROXY=1` yalnız API’nin doğrudan önünde bir güvenilir proxy olduğunda seçilir.
